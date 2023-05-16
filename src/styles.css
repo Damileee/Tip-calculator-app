@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      @apply appearance-none;
+    }
+  }
+
+.nbt{
+    @apply bg-secondary-100 text-center hover:bg-primary-100 hover:text-black rounded-lg p-5 text-white text-xl cursor-pointer font-spacemono;
+}
+.input{
+    @apply p-4 sm:mb-5 bg-primary-10 hover:cursor-pointer rounded-xl min-w-full outline-primary-100 text-right bg-no-repeat bg-left placeholder:font-spacemono text-2xl text-primary-50 font-spacemono appearance-none
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+  }
