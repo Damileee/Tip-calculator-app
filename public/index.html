@@ -11,79 +11,77 @@
 
 <body>
     <div class="h-screen w-screen flex flex-col justify-center items-center">
-        <main class="h-[85%] w-[80%] md:border max-md:border-none rounded-xl lg:py-10 max-lg:py-4 flex max-lg:justify-center relative">
-            <a href="/signup/personalInfo"
-                class="text-sm text-slate-400 lg:absolute lg:left-20 lg:mt-4 max-lg:static max-lg:mt-7">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="#6B7280" class="w-3 h-3">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                </svg>
-            </a>
+        <main class="h-[85%] w-[80%] md:border max-md:border-none rounded-xl lg:py-10 max-lg:py-1 flex xl:justify-between max-xl:justify-center">
+            <div class="xl:ml-20 max-xl:ml-1">
+                <span class="text-xs text-slate-500">1/5</span>
+                <h1 class="text-2xl pb-8 font-medium">Let's get to know you</h1>
 
-
-            <div class="mx-auto">
-                <div>
-                    <span class="text-xs text-slate-500">2/5</span>
-                    <h1 class="text-2xl mb-8 lg:mt-0 max-lg:mt-4 font-medium">Create your workspace</h1>
-                </div>
                 <div class="flex gap-5">
-                    <div class="p-9 rounded-xl mt-2 h-5 bg-blue-600"></div>
+                    <div class="p-9 rounded-[2.5rem] mt-2 h-5 bg-blue-600"></div>
                     <div class="mb-10">
-                        <h2 class="font-semibold">Company logo</h2>
+                        <h2>Profile picture</h2>
                         <span>
                             <button class="my-2">
                                 <span class="border rounded-lg text-xs pt-1 pb-[5px] px-3 shadow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor" class="w-3 h-3 inline-block">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 inline-block">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                                    </svg>      
                                     Upload image
                                 </span>
                             </button>
                             <button class="border rounded-lg my-2 text-xs text-slate-400 pt-1 pb-[5px] px-3">
-                                <span>Remove</span>
+                                Remove
                             </button>
                         </span>
-                        <span class="block max-lg:text-[0.6rem] lg:text-xs">*.png, *.jpeg files up to 10MB at least 400px by 400px</span>
+                        <p class="block max-lg:text-[0.6rem] lg:text-xs">*.png, *.jpeg files up to 10MB at least 400px by 400px</p>
                     </div>
                 </div>
-                ​
-                <!-- FORM -->
+            
+                <!-- INPUT FIELDS -->
                 <form class="flex flex-col gap-4">
-                    <div class="flex flex-col">
-                        <label for="company-name" class="text-sm text-slate-500 mb-1">Company name</label>
-                        <input class="border rounded-xl py-2 pl-3 lg:w-[388px] max-lg:w-[310px] placeholder-text-base outline-blue-300"
-                            placeholder="Enter your company name..." type="text" id="company-name">
+                    <div class="flex flex-col text-slate-600 text-sm">
+                        <label for="firstName" class="mb-1">First name</label>
+                        <input class="border rounded-xl py-2 pl-3 lg:w-[388px] max-lg:w-[310px] placeholder-text-base outline-blue-300" placeholder="Enter your first name..." type="text" id="firstName">
                     </div>
-                    <div class="flex flex-col">
-                        <label for="workspace-handle" class="text-sm text-slate-500 mb-1">Workspace handle</label>
-                        <input class="border rounded-xl py-2 pl-3 lg:w-[388px] max-lg:w-[310px] placeholder-text-base outline-blue-400"
-                            placeholder="app.attio.com/my-workspace" type="text" id="workspace-handle">
+                    <div class="flex flex-col text-slate-600 text-sm">
+                        <label for="lastName" class="mb-1">Last name</label>
+                        <input class="border rounded-xl py-2 pl-3 lg:w-[388px] max-lg:w-[310px] placeholder-text-base outline-blue-400" placeholder="Enter your last name..." type="text" id="lastName">
                     </div>
-                    <div class="flex flex-col">
-                        <label for="email" class="text-sm text-slate-500 mb-1">Billing country</label>
-                        <select class="border mb-2 p-2 lg:w-[388px] max-lg:w-[310px] rounded-lg outline-[#008CFF]">
-                            <option value="usa">United States</option>
-                            <option value="canada">Canada</option>
-                            <option value="alaska">Alaska</option>
-                        </select>
+                    <div class="flex flex-col text-slate-600 text-sm">
+                        <label for="email" class="mb-1">Email</label>
+                        <input class="border rounded-xl py-2 pl-3 lg:w-[388px] max-lg:w-[310px] placeholder-text-base outline-blue-400" placeholder="ossai@talpipe.com" type="email" id="email">
                     </div>
-                    ​
-                    <!-- CONTINUE BUTTON -->
-                    <a href="/signup/sync">
-                        <button class="bg-blue-600 rounded-xl py-1 lg:w-[388px] max-lg:w-[310px] text-white text-lg">
-                            Continue
-                        </button>
-                    </a>
                 </form>
+
+                <!-- DIVIDER -->
+                <div class="bg-[#000] opacity-5 h-[1px] w-full lg:my-[2rem] max-lg:my-[0.8rem]"></div>
+
+                <div class="flex mb-6">
+                    <div class="flex flex-col mb-2">
+                        <span class="text-sm pb-1">Subscribe to product update emails</span>
+                        <span class="text-xs text-slate-600">Get the latest updates about features and product updates.</span>
+                    </div>
+                    <div>
+                        <input
+                            class="mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1rem] after:h-4 after:w-4 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[0.1rem] checked:after:ml-[1.0625rem] checked:after:h-4 checked:after:w-4 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:bg-blue-600 dark:focus:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]"
+                            type="checkbox"
+                            role="switch"
+                            id="flexSwitchCheckDefault" />
+                    </div>
+                </div>
+
+                <!-- CONTINUE BUTTON -->
+                <a href="/signup/workspace">
+                    <button class="bg-blue-600 rounded-xl py-2 lg:w-[388px] max-lg:w-[310px] text-white">
+                        Continue
+                    </button>
+                </a>
             </div>
-            ​
-            <div
-                class="border rounded-tl-lg rounded-bl-lg bg-slate-100 py-[18rem] px-[13.5rem] mt-9 shadow ml-auto max-xl:hidden">
-            </div>
+
+            <!-- HERO IMAGE -->
+            <div class="border rounded-tl-lg rounded-bl-lg bg-slate-100 ml-auto py-[15rem] px-[13.5rem] mt-9 shadow max-xl:hidden"></div>
         </main>
-        ​
+
         <!-- FOOTER -->
         <footer class="text-slate-500">
             <div class="flex justify-center gap-4 pt-6 text-sm">
@@ -95,5 +93,9 @@
         </footer>
     </div>
 </body>
+
+
+
+
 
 </html>
