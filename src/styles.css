@@ -18,6 +18,6 @@
     @apply p-4 sm:mb-5 bg-primary-10 hover:cursor-pointer rounded-xl min-w-full outline-primary-100 text-right bg-no-repeat bg-left placeholder:font-spacemono text-2xl text-primary-50 font-spacemono appearance-none
 }
 
-body {
+/* body {
     background-color: hsl(185, 41%, 84%);
-  }
+  } */

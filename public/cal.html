@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="flex flex-col justify-center">
+
+    <div class="text-center mt-40 xl:mb-16 sm:mb-12 xl:mr-80 sm:ml-72">
+        <h1 class="text-4xl tracking-widest uppercase font-spacemono text-cyan-900/95">spli<br>tter</h1>
+    </div>
+
+    <main class="ml-52 drop-shadow-lg">
+
+        <span class="p-7 bg-white mr-80 ml-60 w-3/5 h-5/6 rounded-xl grid xl:grid-cols-2 sm:grid-cols-1">
+
+            <div class="pr-5">
+
+                <p class="font-spacemono text-cyan-900/80 pb-3">Bill</p>
+                <div class="billInput">
+                <input id="billInput" type="number" placeholder="0" value="" class="input bg-[url('/images/dollar.svg')]">
+                </div>
+
+                <div>
+                    <p class="py-5 font-spacemono text-cyan-900/80">Select Tip %</p>
+                    <div class="grid xl:grid-cols-3 sm:grid-cols-2 gap-3">
+                        <button class="nbt" value="5">5%</button>
+                        <button class="nbt" value="10">10%</button>
+                        <button class="nbt" value="15">15%</button>
+                        <button class="nbt" value="25">25%</button>
+                        <button class="nbt" value="50">50%</button>
+                        <input type="number" id="customTip" placeholder="Custom" value='' class="text-center bg-primary-10 text-emerald-800 text-xl font-spacemono hover:cursor-pointer rounded-lg outline-primary-100">
+                    </div>
+                </div>
+
+                <div class="pt-7 sm:pb-7 xl:pb-0">
+                    <span class="py-1 text-cyan-900/80 font-spacemono">Number of People</span>
+                    <span id="zero" class="ml-52"></span>
+                    <input id="peopleInput" type="number" placeholder="0" value="" class="input bg-[url('/images/people.svg')]">
+                </div>
+
+            </div>
+            <div class="bg-secondary-100 border rounded-xl">
+                <div class="flex justify-between">
+                    <div>
+                        <div class="m-8">
+                            <p class="text-xl font-spacemono text-white/75">Tip Amount</p>
+                            <p class="text-primary-50 font-spacemono text-lg">/ person</p>
+                        </div>
+                        <div class="m-10">
+                            <p class="text-xl font-spacemono text-white/75">Total</p>
+                            <p class="font-spacemono text-primary-50 text-lg">/ person</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="m-10 align-middle">
+                            <span class="font-spacemono text-primary-100 text-5xl">$</span>
+                            <span id="tipAmt" class="font-spacemono text-primary-100 text-5xl ml-2">0.00</span>
+                        </div>
+                        <div class="m-10 align-middle">
+                            <span class="font-spacemono text-primary-100 text-5xl">$</span>
+                            <span id="total" class="font-spacemono text-primary-100 text-5xl ml-2">0.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="xl:mt-36 sm:mt-14 xl:pl-10 sm:pl-8 sm:pb-5 xl:pb-1">
+                    <button id="btn" disabled class="bg-primary-50 hover:bg-primary-100 border border-emerald-900/70 py-3 px-48 rounded-md">
+                        <p class="font-spacemono text-emerald-900/90 text-xl">
+                            RESET
+                        </p>
+                    </button>
+                </div>
+            </div>
+        </span>
+
+    </main>
+    <script src="/public/index.js"></script>
+</body>
+
+</html>
