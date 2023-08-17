@@ -9,93 +9,77 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
-    <div class="h-screen w-screen flex flex-col justify-center items-center">
-        <main class="h-[85%] w-[80%] md:border max-md:border-none rounded-xl lg:py-10 max-lg:py-1 flex xl:justify-between max-xl:justify-center">
-            <div class="xl:ml-20 max-xl:ml-1">
-                <span class="text-xs text-slate-500">1/5</span>
-                <h1 class="text-2xl pb-8 font-medium">Let's get to know you</h1>
+<body class="flex flex-col justify-center">
 
-                <div class="flex gap-5">
-                    <div class="p-9 rounded-[2.5rem] mt-2 h-5 bg-blue-600"></div>
-                    <div class="mb-10">
-                        <h2>Profile picture</h2>
-                        <span>
-                            <button class="my-2">
-                                <span class="border rounded-lg text-xs pt-1 pb-[5px] px-3 shadow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 inline-block">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
-                                    </svg>      
-                                    Upload image
-                                </span>
-                            </button>
-                            <button class="border rounded-lg my-2 text-xs text-slate-400 pt-1 pb-[5px] px-3">
-                                Remove
-                            </button>
-                        </span>
-                        <p class="block max-lg:text-[0.6rem] lg:text-xs">*.png, *.jpeg files up to 10MB at least 400px by 400px</p>
+    <div class="text-center mt-40 xl:mb-16 sm:mb-12 xl:mr-80 sm:ml-72">
+        <h1 class="text-4xl tracking-widest uppercase font-spacemono text-cyan-900/95">spli<br>tter</h1>
+    </div>
+
+    <main class="ml-52 drop-shadow-lg">
+
+        <span class="p-7 bg-white mr-80 ml-60 w-3/5 h-5/6 rounded-xl grid xl:grid-cols-2 sm:grid-cols-1">
+
+            <div class="pr-5">
+
+                <p class="font-spacemono text-cyan-900/80 pb-3">Bill</p>
+                <div class="billInput">
+                <input id="billInput" type="number" placeholder="0" value="" class="input bg-[url('/images/dollar.svg')]">
+                </div>
+
+                <div>
+                    <p class="py-5 font-spacemono text-cyan-900/80">Select Tip %</p>
+                    <div class="grid xl:grid-cols-3 sm:grid-cols-2 gap-3">
+                        <button class="nbt" value="5">5%</button>
+                        <button class="nbt" value="10">10%</button>
+                        <button class="nbt" value="15">15%</button>
+                        <button class="nbt" value="25">25%</button>
+                        <button class="nbt" value="50">50%</button>
+                        <input type="number" id="customTip" placeholder="Custom" value='' class="text-center bg-primary-10 text-emerald-800 text-xl font-spacemono hover:cursor-pointer rounded-lg outline-primary-100">
                     </div>
                 </div>
-            
-                <!-- INPUT FIELDS -->
-                <form class="flex flex-col gap-4">
-                    <div class="flex flex-col text-slate-600 text-sm">
-                        <label for="firstName" class="mb-1">First name</label>
-                        <input class="border rounded-xl py-2 pl-3 lg:w-[388px] max-lg:w-[310px] placeholder-text-base outline-blue-300" placeholder="Enter your first name..." type="text" id="firstName">
-                    </div>
-                    <div class="flex flex-col text-slate-600 text-sm">
-                        <label for="lastName" class="mb-1">Last name</label>
-                        <input class="border rounded-xl py-2 pl-3 lg:w-[388px] max-lg:w-[310px] placeholder-text-base outline-blue-400" placeholder="Enter your last name..." type="text" id="lastName">
-                    </div>
-                    <div class="flex flex-col text-slate-600 text-sm">
-                        <label for="email" class="mb-1">Email</label>
-                        <input class="border rounded-xl py-2 pl-3 lg:w-[388px] max-lg:w-[310px] placeholder-text-base outline-blue-400" placeholder="ossai@talpipe.com" type="email" id="email">
-                    </div>
-                </form>
 
-                <!-- DIVIDER -->
-                <div class="bg-[#000] opacity-5 h-[1px] w-full lg:my-[2rem] max-lg:my-[0.8rem]"></div>
+                <div class="pt-7 sm:pb-7 xl:pb-0">
+                    <span class="py-1 text-cyan-900/80 font-spacemono">Number of People</span>
+                    <span id="zero" class="ml-52"></span>
+                    <input id="peopleInput" type="number" placeholder="0" value="" class="input bg-[url('/images/people.svg')]">
+                </div>
 
-                <div class="flex mb-6">
-                    <div class="flex flex-col mb-2">
-                        <span class="text-sm pb-1">Subscribe to product update emails</span>
-                        <span class="text-xs text-slate-600">Get the latest updates about features and product updates.</span>
+            </div>
+            <div class="bg-secondary-100 border rounded-xl">
+                <div class="flex justify-between">
+                    <div>
+                        <div class="m-8">
+                            <p class="text-xl font-spacemono text-white/75">Tip Amount</p>
+                            <p class="text-primary-50 font-spacemono text-lg">/ person</p>
+                        </div>
+                        <div class="m-10">
+                            <p class="text-xl font-spacemono text-white/75">Total</p>
+                            <p class="font-spacemono text-primary-50 text-lg">/ person</p>
+                        </div>
                     </div>
                     <div>
-                        <input
-                            class="mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1rem] after:h-4 after:w-4 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[0.1rem] checked:after:ml-[1.0625rem] checked:after:h-4 checked:after:w-4 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:bg-blue-600 dark:focus:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]"
-                            type="checkbox"
-                            role="switch"
-                            id="flexSwitchCheckDefault" />
+                        <div class="m-10 align-middle">
+                            <span class="font-spacemono text-primary-100 text-5xl">$</span>
+                            <span id="tipAmt" class="font-spacemono text-primary-100 text-5xl ml-2">0.00</span>
+                        </div>
+                        <div class="m-10 align-middle">
+                            <span class="font-spacemono text-primary-100 text-5xl">$</span>
+                            <span id="total" class="font-spacemono text-primary-100 text-5xl ml-2">0.00</span>
+                        </div>
                     </div>
                 </div>
-
-                <!-- CONTINUE BUTTON -->
-                <a href="/signup/workspace">
-                    <button class="bg-blue-600 rounded-xl py-2 lg:w-[388px] max-lg:w-[310px] text-white">
-                        Continue
+                <div class="xl:mt-36 sm:mt-14 xl:pl-10 sm:pl-8 sm:pb-5 xl:pb-1">
+                    <button id="btn" disabled class="bg-primary-50 hover:bg-primary-100 border border-emerald-900/70 py-3 px-48 rounded-md">
+                        <p class="font-spacemono text-emerald-900/90 text-xl">
+                            RESET
+                        </p>
                     </button>
-                </a>
+                </div>
             </div>
+        </span>
 
-            <!-- HERO IMAGE -->
-            <div class="border rounded-tl-lg rounded-bl-lg bg-slate-100 ml-auto py-[15rem] px-[13.5rem] mt-9 shadow max-xl:hidden"></div>
-        </main>
-
-        <!-- FOOTER -->
-        <footer class="text-slate-500">
-            <div class="flex justify-center gap-4 pt-6 text-sm">
-                <span>@ 2023 Revwit Inc</span>
-                <span class="underline"><a href="#">Privacy Policy</a></span>
-                <span class="underline"><a href="#">Support</a></span>
-                <span class="underline"><a href="#">Sign out</a></span>
-            </div>
-        </footer>
-    </div>
+    </main>
+    <script src="/public/index.js"></script>
 </body>
-
-
-
-
 
 </html>

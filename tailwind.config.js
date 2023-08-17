@@ -2,7 +2,6 @@
 module.exports = {
   content: [
     "./public/index.html",
-    "./public/cal.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/**/*.{js,ts,jsx,tsx}",
   ],
